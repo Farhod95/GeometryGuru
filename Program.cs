@@ -7,6 +7,7 @@
         {
             Console.WriteLine("\n Kerakli shaklni tanlang: \n");
             Console.WriteLine(" Doira: D");
+            Console.WriteLine(" Uchburchak: W ");
             Console.WriteLine(" Teng tomonli uchburchak: U");
             Console.WriteLine(" Kvadrat: K");
             Console.WriteLine(" To'g'ri burchakli to'rtburchak: T \n");
@@ -31,6 +32,41 @@
                         if (!QaytaIshgaTushirish()) return;
                         break;                 
                     }
+                case "w":
+                {
+                    Console.Write("\n Uchburchak birinchi tomonini kiriting: a=");
+                    if(!double.TryParse(Console.ReadLine(), out double a))
+                    {
+                        NotoriAmalKirtildi();
+                        if (!QaytaIshgaTushirish()) return;
+                        else continue;
+                    }
+                    Console.Write("\n Uchburchak Ikkinchi tomonini kiriting: b=");
+                    if(!double.TryParse(Console.ReadLine(), out double b))
+                    {
+                        NotoriAmalKirtildi();
+                        if (!QaytaIshgaTushirish()) return;
+                        else continue;
+                    }
+                    Console.Write($"\n Uchburchak Uchinchi tomonini kiriting {Math.Abs(a-b)} < c < {a+b}: c=");
+                    if(!double.TryParse(Console.ReadLine(), out double c))
+                    {
+                        NotoriAmalKirtildi();
+                        if (!QaytaIshgaTushirish()) return;
+                        else continue;
+                    }
+                    if(!(Math.Abs(a-b)<c) || !(c < a + b))
+                    {
+                        NotoriAmalKirtildi();
+                        if (!QaytaIshgaTushirish()) return;
+                        else continue;
+                           
+                    }
+                    Uchburchak(a, b, c);
+
+                    if (!QaytaIshgaTushirish()) return;
+                    break;
+                }
                 case "u":
                     {
                         Console.Write("\n Teng tomonli uchburchak tomoni uzunligini kiriting: a=");
@@ -97,6 +133,12 @@
         Console.WriteLine($"\n Doira diametri => P=2*R = {2 * R} !");
         Console.WriteLine($"\n Doira uzunligi  => L=2*𝜋*R = {2 * Math.PI * R} !");
         Console.WriteLine($"\n Doira yuzi  => S=𝜋*R^2 = {Math.PI * Math.Pow(R, 2)} !");
+    }
+    static void Uchburchak(double a, double b, double c)
+    {
+        double P=a+b+c;
+        Console.WriteLine($"\n Uchburchak perimetri => P=a+b+c = {P} !");
+        Console.WriteLine($"\n TUchburchak yuzi  => S=√p(p-a)(p-b)(p-c) = {Math.Sqrt((P/2)*(P/2-a)*(P/2-b)*(P/2-c))} !");
     }
 
     static void TengTomonliUchburchak(double a)
