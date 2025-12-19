@@ -1,3 +1,5 @@
+![Demo animation](Assets/animation.gif)
+
 # 🎨 Geometrik Shakllar Hisoblash Dasturi
 
 Bu loyiha **C# Console Application** bo‘lib, foydalanuvchiga turli geometrik shakllarning perimetri, yuzi va boshqa o‘lchamlarini hisoblash imkonini beradi. Loyiha **OOP tamoyillari** asosida yozilgan va interaktiv menyu orqali ishlaydi.
