@@ -1,5 +1,4 @@
 ![Console App Demo](Assets/animation.gif)
-<img src="Assets/animation.gif" alt="Console App Demo" width="200">
 
 # 🎨 Geometrik Shakllar Hisoblash Dasturi
 
